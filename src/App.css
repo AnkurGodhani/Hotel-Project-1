@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+ES:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+ES:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.home{
+    background: url("https://images.viewretreats.com/wp-content/uploads/2022/10/13213239/BEST-DUBAI-HERO-oneonly-royal-mirage.jpeg");
+    background-size: cover ;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    
+}
+.contect{
+    background: url("https://images.alphacoders.com/288/288341.jpg ") ;
+    background-size: cover ;
+    /* object-fit: cover; */
+    
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.home1{
+    background: url("https://assets.zeezest.com/blogs/PROD_Banner-Taj%20Lake%20Palace,%20Udaipur%20(7)_1676872973177_thumb_1200.jpeg?w=3840&q=75");
+    background-size: cover ;
+    object-fit: cover;
+    height: 65vh;
+    width: 100vw;
+}
+
+
+.font {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: italic;
+      }
+
+.font1 {
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+}
+.input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.font2 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
   }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bgimage{
+    background:url("./images/hotelsOfseen.jpg");
+    width: 100%;
+    background-size: cover;
+   
+}  
+
+.mySwiper2 {
+  height: 100%;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* HTML: <div class=" "></div> */
+.loader {
+  width: 60px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  aspect-ratio: 1;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  flex: 1;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px,#cd4242 90deg,#0000 0);
+  background: var(--g), var(--g), var(--g);
+  filter: drop-shadow(30px 30px 0 #842424);
+  animation: l20 1s infinite;
+}
+.loader:after {
+  transform: scaleX(-1);
+}
+@keyframes l20 {
+   0%   {background-position:0     0, 10px 10px, 20px 20px}
+   33%  {background-position:10px  10px}
+   66%  {background-position:0    20px,10px 10px,20px 0   }
+   100% {background-position:0     0, 10px 10px, 20px 20px}
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
